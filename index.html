@@ -35,7 +35,7 @@
             </div>
             <div class="user">
                 <!-- creates the profile pic and title at the top left as well -->
-                <img src="images/pfp.jpg" alt="Portrait" class="user-img" id="circle-image">
+                <img src="images/pfp.jpg" alt="Portrait" class="gen-pics" id="circle-image">
                 <div>
                     <p class="bold"> Anjan A. </p>
                     <p> Aspiring SWE </p>
@@ -51,8 +51,10 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="bx bxs-compass"></i>
-                        <span class="nav-item">Experiences</span>
+                        <a href="experience.html" class="ontoggle">
+                            <i class="bx bxs-compass"></i>
+                            <span class="nav-item">Experiences</span>
+                        </a>
                     </a>
                     <span class="tooltip">Experiences</span>
                 </li>
@@ -106,7 +108,10 @@
                 </p>
 
                 <p class=bio>
-                    University Email: anjan.athreya@stonybrook.edu
+                    University Email:
+                    <a href="mailto:anjan.athreya@stonybrook.edu" target="_blank">
+                        anjan.athreya@stonybrook.edu
+                    </a>
                 </p>
                 <a href="https://www.linkedin.com/in/anjan-athreya-242ab02b8">
                     <i class='bx bxl-linkedin-square' id='linkedIn'></i>
@@ -139,10 +144,5 @@
         // Adjust on load and resize
         window.addEventListener('load', adjustFontSize);
         window.addEventListener('resize', adjustFontSize);
-
-        // let linked = document.querySelector('#linkedIn');
-        // linkedIn.onclick = function() {
-        //     open("www.linkedin.com/in/anjan-athreya-242ab02b8");
-        // }
     </script>
 </html>
