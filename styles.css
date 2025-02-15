@@ -28,7 +28,11 @@
 .pfp-container {
     display: flex;
     justify-content: center;
-    margin-top: px
+    width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 1s;
 }
 
 .pfp-img {
@@ -37,6 +41,7 @@
     object-fit: cover;
     border-radius: 50%;
     border: 1px solid #eee;
+    z-index: 200px;
     transition: transform 0.5s ease; /* Smooth transition for image scaling */
 }
 
@@ -165,6 +170,10 @@
 
 #linkedIn {
     font-size: 3rem; /* Adjust the size as needed */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 1s;
 }
 
 /* Adjust for inactive sidebar */
@@ -212,7 +221,7 @@
 
 .main-content {
     text-align: center;
-    background-color: #eee;
+    background-color: #ACACAC;
     min-height: 100vh;
     top: 0;
     left: 80px;
@@ -242,6 +251,16 @@
 .nameTitle {
     font-size: 5rem;
     transition: font-size 0.5s ease; /* Smooth transition for font size */
+    /* background-color: #727272; */
+    background-image: url();
+    width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+#internTitle {
+    margin-top: 30px;
 }
 
 .main-content .mission {
@@ -250,12 +269,83 @@
     word-wrap: break-word;
     white-space: normal;
     padding: 0 1rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 1s;
 }
 
 .main-content .bio{
+    opacity: 0;
     font-size: 1rem;
     transition: font-size 0.5s ease;
     word-wrap: break-word;
     white-space: normal;
     /* padding: 0 1rem; */
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.gen-pics {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #eee;
+    opacity: 0;
+    transition: opacity 0.1s ease-out;
+}
+
+.sidebar.active .gen-pics {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.company-img {
+    width:  455px;
+    height: 175px;
+}
+
+.company-img:hover {
+    border: 5px solid #FFC300;
+}
+
+#headTitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: left;
+
+}
+
+#internTitle {
+    color: #FFC300;
+}
+
+.bullets {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.mainwrap {
+    color: #fff;
+    background-color: #12171e;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+#bulb {
+    color: #005a94;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
