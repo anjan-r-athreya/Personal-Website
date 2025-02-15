@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta name="description" content="Anjan's Portfolio">
+        <meta name="keywords" content="About Me, Skills, Experience, Fun Stuff, Goals, Projects">
+        <meta name="author" content="Asipiring Software Engineer Anjan Athreya">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+
+        <title>Anjan Athreya's Portfolio</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <!-- Box Icons -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <script src="scripts/scripts.js"> defer </script>
+    </head>
+    <body>
+        <!-- Sidebar HTML code -->
+         <div class="sidebar">
+            <div class="top">
+                <!-- creates the logo at the top left -->
+                <div class=logo>
+                    <img src="images/SBULogo" class="sbulogo"></img>
+                    <span> Portfolio </span>
+                </div>
+                <i class="bx bx-menu" id="btn"></i>
+            </div>
+            <div class="user">
+                <!-- creates the profile pic and title at the top left as well -->
+                <img src="images/pfp.jpg" alt="Portrait" class="user-img" id="circle-image">
+                <div>
+                    <p class="bold"> Anjan A. </p>
+                    <p> Aspiring SWE </p>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="bx bxs-home-alt-2"></i>
+                        <span class="nav-item">Homepage</span>
+                    </a>
+                    <span class="tooltip">Homepage</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bx bxs-compass"></i>
+                        <span class="nav-item">Experiences</span>
+                    </a>
+                    <span class="tooltip">Experiences</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bx bxs-wrench"></i>
+                        <span class="nav-item">Skills</span>
+                    </a>
+                    <span class="tooltip">Skills</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bx bxs-user"></i>
+                        <span class="nav-item">About Me</span>
+                    </a>
+                    <span class="tooltip">About Me</span>
+                </li>
+            </ul>
+         </div>
+
+         <div class="main-content">
+            <div class="container">
+                <h1 class="nameTitle"> Anjan R. Athreya </h1>
+                <div class="pfp-container">
+                    <img src="images/Senior%20Portrait.png" alt="pfp" class="pfp-img">
+                </div>
+                <h3 class="mission"> My Mission </h3>
+                <h4 class="bio">
+                I'm an aspiring Software Engineer studying Computer Science at Stony Brook University. In the future, I plan to
+                apply machine learning technology to healthcare in order to:
+                    <p class="bullet">
+                        - locate mutated genes causing genetic disorders such as Primary Ciliary Dyskinesia
+                    </p>
+                    <p>
+                        with the goal that these genes could potentially have editing techniques employed on them for a cure.
+                    </p>
+                </h4>
+
+                <h3 class="mission">
+                    Contact Me
+                </h3>
+                <p class=bio>
+                    Mobile: 203-727-4972
+                </p>
+
+                <p class="bio">
+                    Personal Email:
+                    <a href="mailto:anjan.r.athreya@gmail.com" target="_blank">
+                        anjan.r.athreya@gmail.com
+                    </a>
+                </p>
+
+                <p class=bio>
+                    University Email: anjan.athreya@stonybrook.edu
+                </p>
+                <a href="https://www.linkedin.com/in/anjan-athreya-242ab02b8">
+                    <i class='bx bxl-linkedin-square' id='linkedIn'></i>
+                </a>
+            </h4>
+            </div>
+         </div>
+    </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let btn = document.querySelector('#btn');
+            let sidebar = document.querySelector('.sidebar');
+            btn.onclick = function() {
+                sidebar.classList.toggle('active');
+            };
+        });
+
+        // Dynamically adjust font size based on screen size
+        function adjustFontSize() {
+        const content = document.querySelector('.container');
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+
+        // Adjust font size based on screen size
+        const baseFontSize = Math.min(screenWidth, screenHeight) / 30;
+            content.style.fontSize = `${baseFontSize}px`;
+        }
+
+        // Adjust on load and resize
+        window.addEventListener('load', adjustFontSize);
+        window.addEventListener('resize', adjustFontSize);
+
+        // let linked = document.querySelector('#linkedIn');
+        // linkedIn.onclick = function() {
+        //     open("www.linkedin.com/in/anjan-athreya-242ab02b8");
+        // }
+    </script>
+</html>
