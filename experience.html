@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta name="description" content="Anjan's Portfolio">
+        <meta name="keywords" content="About Me, Skills, Experience, Fun Stuff, Goals, Projects">
+        <meta name="author" content="Asipiring Software Engineer Anjan Athreya">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+
+        <title>Anjan Athreya's Portfolio</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <!-- Box Icons -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <script src="scripts/scripts.js"> defer </script>
+    </head>
+    <body>
+        <!-- Sidebar HTML code -->
+         <div class="sidebar">
+            <div class="top">
+                <!-- creates the logo at the top left -->
+                <div class=logo>
+                    <img src="images/SBULogo" class="sbulogo"></img>
+                    <span> Portfolio </span>
+                </div>
+                <i class="bx bx-menu" id="btn"></i>
+            </div>
+            <div class="user">
+                <!-- creates the profile pic and title at the top left as well -->
+                <img src="images/BomberJack.jpg" alt="Portrait" class="gen-pics" id="rect-image">
+                <div>
+                    <p class="bold"> Anjan A. </p>
+                    <p> Aspiring SWE </p>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <a href="index.html" class="ontoggle">
+                            <i class="bx bxs-home-alt-2"></i>
+                            <span class="nav-item">Homepage</span>
+                        </a>
+                    </a>
+                    <span class="tooltip">Homepage</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <a href="experience.html" class="ontoggle">
+                            <i class="bx bxs-compass"></i>
+                            <span class="nav-item">Experiences</span>
+                        </a>
+                    </a>
+                    <span class="tooltip">Experiences</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bx bxs-wrench"></i>
+                        <span class="nav-item">Skills</span>
+                    </a>
+                    <span class="tooltip">Skills</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bx bxs-user"></i>
+                        <span class="nav-item">About Me</span>
+                    </a>
+                    <span class="tooltip">About Me</span>
+                </li>
+            </ul>
+         </div>
+
+         <div class="main-content">
+            <div class="container">
+                <h1 class="nameTitle" id="headTitle"> Experience/Skills </h1>
+                <div class="mainwrap">
+                    <div class="pfp-container">
+                        <a href="https://www.lightboxre.com/">
+                            <img src="images/LightBoxRELogoRMBG.png" alt="pfp" class="company-img">
+                        </a>
+                    </div>
+                    <h3 class="mission" id="internTitle"> On-site Internship </h3>
+                    <h4 class="bio">
+                        <div id="internTitle">
+                            May-June 2024 (2mos)
+                        </div>
+                        <div class="bullets">
+                            <p>
+                                <i class='bx bxs-bulb' id="bulb"></i>
+                                Collaborated with a team of five interns at LightBox RE to analyze and map tax parcels affected by - natural disasters, delivering critical insights.
+                            </p>
+                            <p>
+                                <i class='bx bxs-bulb' id="bulb"></i>
+                                Utilized Python's Geo-JSON library to seamlessly integrate the LightBox API with ArcGIS, creating dynamic and interactive maps.
+                            </p>
+                            <p>
+                                <i class='bx bxs-bulb' id="bulb"></i>
+                                Strategically delegated tasks based on team members' strengths and expertise, optimizing workflows to tackle complex challenges with precision and efficiency.
+                            </p>
+                        </div>
+                    </h4>
+                </div>
+            </div>
+         </div>
+    </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let btn = document.querySelector('#btn');
+            let sidebar = document.querySelector('.sidebar');
+            btn.onclick = function() {
+                sidebar.classList.toggle('active');
+            };
+        });
+
+        // Dynamically adjust font size based on screen size
+        function adjustFontSize() {
+        const content = document.querySelector('.container');
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+
+        // Adjust font size based on screen size
+        const baseFontSize = Math.min(screenWidth, screenHeight) / 30;
+            content.style.fontSize = `${baseFontSize}px`;
+        }
+
+        // Adjust on load and resize
+        window.addEventListener('load', adjustFontSize);
+        window.addEventListener('resize', adjustFontSize);
+    </script>
+</html>
