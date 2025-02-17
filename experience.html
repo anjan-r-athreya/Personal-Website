@@ -39,7 +39,7 @@
                 <img src="images/BomberJack.jpg" alt="Portrait" class="gen-pics" id="rect-image">
                 <div>
                     <p class="bold"> Anjan A. </p>
-                    <p> Aspiring SWE </p>
+                    <p> Aspiring MLE </p>
                 </div>
             </div>
             <ul>
@@ -63,8 +63,10 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="bx bxs-user"></i>
-                        <span class="nav-item">About Me</span>
+                        <a href="about.html" class="ontoggle">
+                            <i class="bx bxs-user"></i>
+                            <span class="nav-item">About Me</span>
+                        </a>
                     </a>
                     <span class="tooltip">About Me</span>
                 </li>
@@ -102,64 +104,79 @@
                     </h4>
                 </div>
                 <div id="downButton">
-                    <i class='bx bx-chevron-down'></i>
+                    <i class='bx bx-expand-vertical'></i>
                 </div>
             </div>
          </div>
 
          <div class="main-content" id="skills">
+            <h1 class="nameTitle" id="skillTitle"> Skills </h1>
             <div class="languageTitle">
                 Languages
             </div>
             <div class="skillcons">
                 <ul>
                     <li>
-                        <div>
-                            <i class='bx bxl-python' id="python"></i>
-                        </div>
-                        <span class="skilltip"> Python </span>
+                        <a href="https://www.python.org/">
+                            <div>
+                                <i class='bx bxl-python' id="python"></i>
+                            </div>
+                            <span class="skilltip"> Python </span>
+                        </a>
                     </li>
 
                     <li>
-                        <div>
-                            <i class='bx bxs-data' id="sql"></i>
-                        </div>
-                        <span class="skilltip"> SQL </span>
+                        <a href="https://www.mysql.com/">
+                            <div>
+                                <i class='bx bxs-data' id="sql"></i>
+                            </div>
+                            <span class="skilltip"> SQL </span>
+                        </a>
                     </li>
 
                     <li>
-                        <div>
-                            <i class='bx bxl-java' id="java"></i>
-                        </div>
-                        <span class="skilltip"> Java </span>
+                        <a href="https://www.java.com/en/">
+                            <div>
+                                <i class='bx bxl-java' id="java"></i>
+                            </div>
+                            <span class="skilltip"> Java </span>
+                        </a>
                     </li>
 
                     <li>
-                        <div>
-                            <i class="devicon-c-plain-wordmark" id="c-lang"></i>
-                        </div>
-                        <span class="skilltip"> C </span>
+                        <a href="https://devdocs.io/c/">
+                            <div>
+                                <i class="devicon-c-plain-wordmark" id="c-lang"></i>
+                            </div>
+                            <span class="skilltip"> C </span>
+                        </a>
                     </li>
 
                     <li>
-                        <div>
-                            <i class='bx bxl-html5'id="html" ></i>
-                        </div>
-                        <span class="skilltip"> HTML </span>
+                        <a href="https://html.spec.whatwg.org/">
+                            <div>
+                                <i class='bx bxl-html5'id="html" ></i>
+                            </div>
+                            <span class="skilltip"> HTML </span>
+                        </a>
                     </li>
 
                     <li>
-                        <div>
-                            <i class='bx bxl-css3' id="css"></i>
-                        </div>
-                        <span class="skilltip"> CSS </span>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+                            <div>
+                                <i class='bx bxl-css3' id="css"></i>
+                            </div>
+                            <span class="skilltip"> CSS </span>
+                        </a>
                     </li>
 
                     <li>
-                        <div>
-                            <i class='bx bxl-javascript' id="javascript"></i>
-                        </div>
-                        <span class="skilltip"> JavaScript </span>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+                            <div>
+                                <i class='bx bxl-javascript' id="javascript"></i>
+                            </div>
+                            <span class="skilltip"> JavaScript </span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -171,10 +188,12 @@
                 <div class="others">
                     <ul>
                         <li>
-                            <div>
-                                <i class="devicon-json-plain colored" id="JSON"></i>
-                            </div>
-                            <span class="skilltip"> JSON </span>
+                            <a href="https://www.json.org/json-en.htmlb">
+                                <div>
+                                    <i class="devicon-json-plain colored" id="JSON"></i>
+                                </div>
+                                <span class="skilltip"> JSON </span>
+                            </a>
                         </li>
 
                         <li>
@@ -200,6 +219,7 @@
 
         const chevronBtn = document.getElementById('downButton');
         const section2 = document.getElementById('skills');
+        skillTitle = document.getElementById('skillTitle');
 
         // Add click event listener to the button
         chevronBtn.addEventListener('click', function () {
@@ -207,19 +227,12 @@
             section2.scrollIntoView({ behavior: 'smooth' });
         });
 
-        downButton = document.getElementById('downButton');
+        chevronIcon = document.getElementById('downButton');
         downButton.addEventListener('click', function() {
-            downButton.innerHTML = '<i class="bx bx-chevron-up" id="chevronUp"></i>';
-
             experience = document.getElementById('experience');
             downButton.addEventListener('click', function(){
                 experience.scrollIntoView({ behavior: 'smooth' });
-                if (downButton.innerHTML == '<i class="bx bx-chevron-up" id="chevronUp"></i>') {
-                    downButton.innterHTML = '<i class="bx bx-chevron-down"></i>';
-                }
-                else {
-                    downButton.innerHTML = '<i class="bx bx-chevron-up" id="chevronUp"></i>';
-                }
+                skillTitle.classList.toggle('active');
             })
         })
 
