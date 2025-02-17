@@ -19,6 +19,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
         <!-- Box Icons -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
         <script src="scripts/scripts.js"> defer </script>
     </head>
@@ -28,7 +29,7 @@
             <div class="top">
                 <!-- creates the logo at the top left -->
                 <div class=logo>
-                    <img src="images/SBULogo" class="sbulogo"></img>
+                    <img src="images/SBULogo.jpg" class="sbulogo"></img>
                     <span> Portfolio </span>
                 </div>
                 <i class="bx bx-menu" id="btn"></i>
@@ -55,17 +56,10 @@
                     <a href="#">
                         <a href="experience.html" class="ontoggle">
                             <i class="bx bxs-compass"></i>
-                            <span class="nav-item">Experiences</span>
+                            <span class="nav-item">Experiences/Skills</span>
                         </a>
                     </a>
-                    <span class="tooltip">Experiences</span>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="bx bxs-wrench"></i>
-                        <span class="nav-item">Skills</span>
-                    </a>
-                    <span class="tooltip">Skills</span>
+                    <span class="tooltip">Experiences/Skills</span>
                 </li>
                 <li>
                     <a href="#">
@@ -77,7 +71,7 @@
             </ul>
          </div>
 
-         <div class="main-content">
+         <div class="main-content" id="experience">
             <div class="container">
                 <h1 class="nameTitle" id="headTitle"> Experience/Skills </h1>
                 <div class="mainwrap">
@@ -107,6 +101,90 @@
                         </div>
                     </h4>
                 </div>
+                <div id="downButton">
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+            </div>
+         </div>
+
+         <div class="main-content" id="skills">
+            <div class="languageTitle">
+                Languages
+            </div>
+            <div class="skillcons">
+                <ul>
+                    <li>
+                        <div>
+                            <i class='bx bxl-python' id="python"></i>
+                        </div>
+                        <span class="skilltip"> Python </span>
+                    </li>
+
+                    <li>
+                        <div>
+                            <i class='bx bxs-data' id="sql"></i>
+                        </div>
+                        <span class="skilltip"> SQL </span>
+                    </li>
+
+                    <li>
+                        <div>
+                            <i class='bx bxl-java' id="java"></i>
+                        </div>
+                        <span class="skilltip"> Java </span>
+                    </li>
+
+                    <li>
+                        <div>
+                            <i class="devicon-c-plain-wordmark" id="c-lang"></i>
+                        </div>
+                        <span class="skilltip"> C </span>
+                    </li>
+
+                    <li>
+                        <div>
+                            <i class='bx bxl-html5'id="html" ></i>
+                        </div>
+                        <span class="skilltip"> HTML </span>
+                    </li>
+
+                    <li>
+                        <div>
+                            <i class='bx bxl-css3' id="css"></i>
+                        </div>
+                        <span class="skilltip"> CSS </span>
+                    </li>
+
+                    <li>
+                        <div>
+                            <i class='bx bxl-javascript' id="javascript"></i>
+                        </div>
+                        <span class="skilltip"> JavaScript </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="languageTitle">
+                Other
+            </div>
+            <div class="skillcons">
+                <div class="others">
+                    <ul>
+                        <li>
+                            <div>
+                                <i class="devicon-json-plain colored" id="JSON"></i>
+                            </div>
+                            <span class="skilltip"> JSON </span>
+                        </li>
+
+                        <li>
+                            <div>
+                                <i class='bx bxs-cog' id="API"></i>
+                            </div>
+                            <span class="skilltip"> API </span>
+                        </li>
+                    </ul>
+                </div>
             </div>
          </div>
     </body>
@@ -119,6 +197,31 @@
                 sidebar.classList.toggle('active');
             };
         });
+
+        const chevronBtn = document.getElementById('downButton');
+        const section2 = document.getElementById('skills');
+
+        // Add click event listener to the button
+        chevronBtn.addEventListener('click', function () {
+        // Smoothly scroll to the next section
+            section2.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        downButton = document.getElementById('downButton');
+        downButton.addEventListener('click', function() {
+            downButton.innerHTML = '<i class="bx bx-chevron-up" id="chevronUp"></i>';
+
+            experience = document.getElementById('experience');
+            downButton.addEventListener('click', function(){
+                experience.scrollIntoView({ behavior: 'smooth' });
+                if (downButton.innerHTML == '<i class="bx bx-chevron-up" id="chevronUp"></i>') {
+                    downButton.innterHTML = '<i class="bx bx-chevron-down"></i>';
+                }
+                else {
+                    downButton.innerHTML = '<i class="bx bx-chevron-up" id="chevronUp"></i>';
+                }
+            })
+        })
 
         // Dynamically adjust font size based on screen size
         function adjustFontSize() {
