@@ -211,6 +211,52 @@
     transition: opacity 0.5s ease; /* Smooth transition for opacity */
 }
 
+.skilltip {
+    position: absolute;
+    top: 100%; /* Position below the icon */
+    left: 53%;
+    transform: translateX(-53%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.6rem;
+    padding: 0.4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 1000;
+    opacity: 0;
+    background-color: #12171e; /* Match tooltip background */
+    color: #fff; /* Match tooltip text color */
+    white-space: nowrap;
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+    pointer-events: none; /* Ensure the tooltip doesn't interfere with hover */
+}
+
+/* Show skilltip on hover */
+.skillcons li:hover .skilltip {
+    opacity: 1;
+}
+
+.skillcons li {
+    color: #2c3e50;
+}
+
+.skillcons li:hover {
+    color: #079ade;
+}
+
+.skillcons ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0; /* Removes default padding */
+    margin-left: 0;
+}
+
+.others ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0; /* Removes default padding */
+    margin-left: 0;
+    font-size: 3rem;
+}
+
 .sidebar ul li:hover .tooltip {
     opacity: 1;
 }
@@ -337,6 +383,46 @@
 
 #bulb {
     color: #005a94;
+}
+
+#downButton {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    left: 50% + 80px;
+    color: #12171e;
+    border: none;
+    padding: 15px;
+    font-size: 24px; /* Size of the chevron */
+    cursor: pointer;
+}
+
+#downButton.active {
+    opacity: 0;
+    cursor: none;
+}
+
+.skillcons {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.othercons {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+#JSON {
+    color: #2c3e50;
+}
+
+#JSON:hover {
+    color: #079ade;
+}
+
+.languageTitle {
+    font-size: 2rem;
 }
 
 @keyframes fadeInUp {
