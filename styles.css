@@ -475,14 +475,6 @@
     animation-delay: 1.5s;
 }
 
-.sidebar ul li a {
-    pointer-events: none;
-}
-
-.sidebar.active ul li a {
-    pointer-events: auto;
-}
-
 .light-dark {
     cursor: pointer;
     color: #fff;
