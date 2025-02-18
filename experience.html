@@ -71,6 +71,9 @@
                     <span class="tooltip">About Me</span>
                 </li>
             </ul>
+            <div class="light-dark" id="togglebackground">
+                <i class='bx bx-sun'> </i>
+            </div>
          </div>
 
          <div class="main-content" id="experience">
@@ -215,6 +218,10 @@
             btn.onclick = function() {
                 sidebar.classList.toggle('active');
             };
+        });
+
+        document.getElementById('togglebackground').addEventListener("click", () => {
+            document.body.classList.toggle('inverse-mode');
         });
 
         const chevronBtn = document.getElementById('downButton');
