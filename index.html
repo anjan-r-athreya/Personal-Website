@@ -130,25 +130,26 @@
             btn.onclick = function() {
                 sidebar.classList.toggle('active');
             };
-        });
 
-        document.getElementById('togglebackground').addEventListener("click", () => {
-            document.body.classList.toggle('inverse-mode');
-        });
 
-        // Dynamically adjust font size based on screen size
-        function adjustFontSize() {
-        const content = document.querySelector('.container');
-        const screenWidth = window.innerWidth;
-        const screenHeight = window.innerHeight;
+            document.getElementById('togglebackground').addEventListener("click", () => {
+                document.body.classList.toggle('inverse-mode');
+            });
 
-        // Adjust font size based on screen size
-        const baseFontSize = Math.min(screenWidth, screenHeight) / 30;
-            content.style.fontSize = `${baseFontSize}px`;
-        }
+            // Dynamically adjust font size based on screen size
+            function adjustFontSize() {
+            const content = document.querySelector('.container');
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
 
-        // Adjust on load and resize
-        window.addEventListener('load', adjustFontSize);
-        window.addEventListener('resize', adjustFontSize);
+            // Adjust font size based on screen size
+            const baseFontSize = Math.min(screenWidth, screenHeight) / 30;
+                content.style.fontSize = `${baseFontSize}px`;
+            }
+
+            // Adjust on load and resize
+            window.addEventListener('load', adjustFontSize);
+            window.addEventListener('resize', adjustFontSize);
+        })
     </script>
 </html>
