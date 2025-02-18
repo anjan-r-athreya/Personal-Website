@@ -71,6 +71,9 @@
                     <span class="tooltip">About Me</span>
                 </li>
             </ul>
+            <div class="light-dark" id="togglebackground">
+                <i class='bx bx-sun'> </i>
+            </div>
          </div>
 
          <div class="main-content">
@@ -80,7 +83,7 @@
                     <img src="images/Senior%20Portrait.png" alt="pfp" class="pfp-img">
                 </div>
                 <h3 class="mission"> My Mission </h3>
-                <h4 class="bio">
+                <h4 class="bio" id="mission">
                 I'm an aspiring Machine Learning Engineer studying Computer Science at Stony Brook University. In the future, I plan to
                 apply machine learning technology to healthcare in order to:
                     <p class="bullet">
@@ -94,18 +97,18 @@
                 <h3 class="mission">
                     Contact Me
                 </h3>
-                <p class=bio>
+                <p class=bio id="mission">
                     Mobile: 203-727-4972
                 </p>
 
-                <p class="bio">
+                <p class="bio" id="mission">
                     Personal Email:
                     <a href="mailto:anjan.r.athreya@gmail.com" target="_blank">
                         anjan.r.athreya@gmail.com
                     </a>
                 </p>
 
-                <p class=bio>
+                <p class=bio id="mission">
                     University Email:
                     <a href="mailto:anjan.athreya@stonybrook.edu" target="_blank">
                         anjan.athreya@stonybrook.edu
@@ -129,7 +132,9 @@
             };
         });
 
-
+        document.getElementById('togglebackground').addEventListener("click", () => {
+            document.body.classList.toggle('inverse-mode');
+        });
 
         // Dynamically adjust font size based on screen size
         function adjustFontSize() {
