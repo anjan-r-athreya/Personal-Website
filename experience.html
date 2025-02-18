@@ -218,44 +218,44 @@
             btn.onclick = function() {
                 sidebar.classList.toggle('active');
             };
-        });
 
-        document.getElementById('togglebackground').addEventListener("click", () => {
-            document.body.classList.toggle('inverse-mode');
-        });
-
-        const chevronBtn = document.getElementById('downButton');
-        const section2 = document.getElementById('skills');
-        skillTitle = document.getElementById('skillTitle');
-
-        // Add click event listener to the button
-        chevronBtn.addEventListener('click', function () {
-        // Smoothly scroll to the next section
-            section2.scrollIntoView({ behavior: 'smooth' });
-        });
-
-        chevronIcon = document.getElementById('downButton');
-        downButton.addEventListener('click', function() {
-            experience = document.getElementById('experience');
-            downButton.addEventListener('click', function(){
-                experience.scrollIntoView({ behavior: 'smooth' });
-                skillTitle.classList.toggle('active');
+            document.getElementById('togglebackground').addEventListener("click", () => {
+                document.body.classList.toggle('inverse-mode');
+            });
+    
+            const chevronBtn = document.getElementById('downButton');
+            const section2 = document.getElementById('skills');
+            skillTitle = document.getElementById('skillTitle');
+    
+            // Add click event listener to the button
+            chevronBtn.addEventListener('click', function () {
+            // Smoothly scroll to the next section
+                section2.scrollIntoView({ behavior: 'smooth' });
+            });
+    
+            chevronIcon = document.getElementById('downButton');
+            downButton.addEventListener('click', function() {
+                experience = document.getElementById('experience');
+                downButton.addEventListener('click', function(){
+                    experience.scrollIntoView({ behavior: 'smooth' });
+                    skillTitle.classList.toggle('active');
+                })
             })
-        })
-
-        // Dynamically adjust font size based on screen size
-        function adjustFontSize() {
-        const content = document.querySelector('.container');
-        const screenWidth = window.innerWidth;
-        const screenHeight = window.innerHeight;
-
-        // Adjust font size based on screen size
-        const baseFontSize = Math.min(screenWidth, screenHeight) / 30;
-            content.style.fontSize = `${baseFontSize}px`;
-        }
-
-        // Adjust on load and resize
-        window.addEventListener('load', adjustFontSize);
-        window.addEventListener('resize', adjustFontSize);
+    
+            // Dynamically adjust font size based on screen size
+            function adjustFontSize() {
+            const content = document.querySelector('.container');
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+    
+            // Adjust font size based on screen size
+            const baseFontSize = Math.min(screenWidth, screenHeight) / 30;
+                content.style.fontSize = `${baseFontSize}px`;
+            }
+    
+            // Adjust on load and resize
+            window.addEventListener('load', adjustFontSize);
+            window.addEventListener('resize', adjustFontSize);
+        });
     </script>
 </html>
