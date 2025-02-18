@@ -483,6 +483,89 @@
     pointer-events: auto;
 }
 
+.light-dark {
+    cursor: pointer;
+    color: #fff;
+    opacity: 0;
+    font-size: 3rem;
+    transition: opacity 1s ease;
+}
+
+.sidebar.active .light-dark {
+    opacity: 1;
+}
+
+.inverse-mode .light-dark {
+    color: black;
+}
+
+.inverse-mode .main-content {
+    background-color: black;
+    color: white;
+}
+
+.inverse-mode .others ul li a {
+    color: #fff;
+}
+
+.inverse-mode .skillcons ul li a{
+    color: #fff;
+}
+
+.inverse-mode .mainwrap {
+    background-color: #D5D5D5;
+}
+
+.inverse-mode .bio {
+    color: black;
+}
+
+.inverse-mode #downButton {
+    color: #fff;
+}
+
+.inverse-mode .sidebar {
+    background-color: #fff;
+}
+
+.inverse-mode .sidebar ul li a {
+    color: black;
+}
+
+.inverse-mode .sidebar ul li a:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.inverse-mode #btn {
+    color: black;
+}
+
+.inverse-mode .light-dark i {
+    color: black;
+}
+
+.inverse-mode .tooltip {
+    background-color: #D5D5D5 !important;
+    color: #12171e !important;
+}
+
+.inverse-mode .user p {
+    color: #12171e;
+}
+
+.inverse-mode #mission {
+    color: white;
+}
+
+.inverse-mode .paragraphs {
+    color: white;
+}
+
+.inverse-mode .others i {
+    color: white !important;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
