@@ -23,6 +23,9 @@
         <script src="scripts/scripts.js"> defer </script>
     </head>
     <body>
+        <div id="mobile-block" style="display: none;">
+            <h2>Mobile access is not supported.</h2>
+        </div>
         <!-- Sidebar HTML code -->
          <div class="sidebar">
             <div class="top">
@@ -114,6 +117,10 @@
     </body>
 
     <script>
+        if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+            document.body.innerHTML = document.getElementById("mobile-block").innerHTML;
+        }
+
         document.addEventListener("DOMContentLoaded", () => {
             let btn = document.querySelector('#btn');
             let sidebar = document.querySelector('.sidebar');
