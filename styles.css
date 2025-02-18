@@ -558,6 +558,15 @@
     color: white !important;
 }
 
+.inverse-mode .skillcons li:hover i {
+    color: #8C8C8C !important;
+}
+
+.inverse-mode .skilltip {
+    background-color: #D5D5D5;
+    color: black;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
