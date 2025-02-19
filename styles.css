@@ -567,6 +567,14 @@
     color: black;
 }
 
+.sidebar #togglebackground {
+    pointer-events: none;
+}
+
+.sidebar.active #togglebackground{
+    pointer-events: auto;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
