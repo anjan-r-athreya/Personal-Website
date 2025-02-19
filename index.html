@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Anjan's Portfolio">
         <meta name="keywords" content="About Me, Skills, Experience, Fun Stuff, Goals, Projects">
         <meta name="author" content="Asipiring Software Engineer Anjan Athreya">
@@ -120,7 +120,7 @@
     </body>
 
     <script>
-        if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+        if (/Mobi|Android|iPhone/i.test(navigator.userAgent) && !/iPad/i.test(navigator.userAgent)) {
             document.body.innerHTML = document.getElementById("mobile-block").innerHTML;
         }
 
