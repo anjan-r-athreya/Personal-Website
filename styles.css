@@ -49,7 +49,7 @@
     position: fixed;
     top: 0;
     left: 0px;
-    height: 100vh;
+    min-height: 100vh;
     width: 80px;
     background-color: #12171e;
     padding: .4rem .8rem;
@@ -288,7 +288,7 @@
     text-align: center;
     /* max-width: 90%; */
     width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
+    min-height: 100vh; /* Full viewport height */
     overflow: hidden; /**/
     word-wrap: break-word; /* Ensure long text wraps */
     /* height: 100%;*/
@@ -480,7 +480,8 @@
     color: #fff;
     opacity: 0;
     font-size: 3rem;
-    transition: opacity 1s ease;
+    transition: opacity 1s ease-in;
+    transition: opacity 0.2s ease-out;
 }
 
 .sidebar.active .light-dark {
