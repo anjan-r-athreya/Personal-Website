@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Anjan's Portfolio">
         <meta name="keywords" content="About Me, Skills, Experience, Fun Stuff, Goals, Projects">
         <meta name="author" content="Asipiring Software Engineer Anjan Athreya">
@@ -139,25 +139,25 @@
             btn.onclick = function() {
                 sidebar.classList.toggle('active');
             };
-
-            document.getElementById('togglebackground').addEventListener("click", () => {
-                document.body.classList.toggle('inverse-mode');
-            });
-    
-            // Dynamically adjust font size based on screen size
-            function adjustFontSize() {
-            const content = document.querySelector('.container');
-            const screenWidth = window.innerWidth;
-            const screenHeight = window.innerHeight;
-    
-            // Adjust font size based on screen size
-            const baseFontSize = Math.min(screenWidth, screenHeight) / 30;
-                content.style.fontSize = `${baseFontSize}px`;
-            }
-    
-            // Adjust on load and resize
-            window.addEventListener('load', adjustFontSize);
-            window.addEventListener('resize', adjustFontSize);
         });
+
+        document.getElementById('togglebackground').addEventListener("click", () => {
+            document.body.classList.toggle('inverse-mode');
+        });
+
+        // Dynamically adjust font size based on screen size
+        function adjustFontSize() {
+        const content = document.querySelector('.container');
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+
+        // Adjust font size based on screen size
+        const baseFontSize = Math.min(screenWidth, screenHeight) / 30;
+            content.style.fontSize = `${baseFontSize}px`;
+        }
+
+        // Adjust on load and resize
+        window.addEventListener('load', adjustFontSize);
+        window.addEventListener('resize', adjustFontSize);
     </script>
 </html>
