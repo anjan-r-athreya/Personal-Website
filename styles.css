@@ -377,11 +377,17 @@
 .bullets {
     text-align: left;
     margin-top: 50px;
+    max-width: 50rem;
+    color:#12171e;
+}
+
+#desc-brief {
+    color: crimson;
 }
 
 .mainwrap {
     color: #fff;
-    background-color: #12171e;
+    background-color: None;
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 1.5s ease-out forwards;
@@ -480,6 +486,8 @@
     color: #fff;
     opacity: 0;
     font-size: 3rem;
+    margin-top: 250px;
+    margin-left: 80px;
     transition: opacity 1s ease-in;
     transition: opacity 0.2s ease-out;
 }
@@ -503,10 +511,6 @@
 
 .inverse-mode .skillcons ul li a{
     color: #fff;
-}
-
-.inverse-mode .mainwrap {
-    background-color: #D5D5D5;
 }
 
 .inverse-mode .bio {
@@ -566,6 +570,22 @@
 .inverse-mode .skilltip {
     background-color: #D5D5D5;
     color: black;
+}
+
+.inverse-mode .bullets {
+    color: #DCDCDC;
+}
+
+.inverse-mode #desc-brief {
+    color: #DCDCDC;
+}
+
+#internTitle {
+    color: crimson;
+}
+
+.inverse-mode #internTitle {
+    color:#FFC300;
 }
 
 .sidebar #togglebackground {
