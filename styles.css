@@ -381,6 +381,10 @@
     color:#12171e;
 }
 
+.bullets p {
+    margin-top: 10px;
+}
+
 #desc-brief {
     color: crimson;
 }
