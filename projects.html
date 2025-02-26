@@ -170,7 +170,7 @@
         });
 
         const chevronBtn = document.getElementById('downButton');
-        const section2 = document.getElementById('skills');
+        const section2 = document.getElementById('nutrition');
         skillTitle = document.getElementById('skillTitle');
 
         // Add click event listener to the button
@@ -183,7 +183,7 @@
         downButton.addEventListener('click', function() {
             experience = document.getElementById('experience');
             downButton.addEventListener('click', function(){
-                experience.scrollIntoView({ behavior: 'smooth' });
+                nutrition.scrollIntoView({ behavior: 'smooth' });
                 skillTitle.classList.toggle('active');
             })
         })
